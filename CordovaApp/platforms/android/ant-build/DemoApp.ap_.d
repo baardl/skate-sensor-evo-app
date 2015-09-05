@@ -59,8 +59,11 @@
 /home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/ui/images/menu.svg \
 /home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/ui/images/arrow-left.svg \
 /home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/ui/images/logo.svg \
+/home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/plugins/com.megster.cordova.ble \
 /home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/plugins/org.apache.cordova.vibration \
+/home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/plugins/com.megster.cordova.ble/www \
+/home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/plugins/com.megster.cordova.ble/www/ble.js \
 /home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
 /home/baardl/sources/skate-sensor-evo-app/CordovaApp/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www \
