@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function () {
+//                var data = "objectID=2&x=1&y=2&z=5&test=1234";
+                var data = "objectID=2&TEST=hei";
+                var xhr = createCORSRequest("POST", "http://37.202.56.19:8080/RTWServer/Receiver/altran/test",data);
+                if (!xhr) {
+                    console.error("CORS not supported");
+                    throw new Error('CORS not supported');
+                } else {
+                    console.log("CORS is supported.")
+/*
+                    $.ajax({
+//                    beforeSend : function(xhr) {
+//                        xhr.setRequestHeader("Synx-Cat", "1");
+//                        xhr.setRequestHeader("Content-Type","application/json");
+//                        xhr.setRequestHeader("Accept","application/json");
+//                        xhr.overrideMimeType("Content-Type","application/json");
+//                        xhr.overrideMimeType("Synx-Cat", "1");
+//                    },
+                        type: "post",
+                        crossDomain: true,
+                        url: "http://localhost:8087/RTWServer/Receiver/osl/acclerometer",
+                        headers: {
+                            "Synx-Cat": 1,
+                        },
+                        data: "objectID=2&x=1&y=2&z=5",
+                        success: function (data, text) {
+                            alert("Data: ", data);
+                            alert("Text: ", text);
+                        },
+                        error: function (request, status, error) {
+                            console.log(arguments);
+                            console.log(status);
+                            console.log(error);
+//                            alert("Response: " + request.status);
+//                            alert("Status: " + status);
+//                            alert("Error: " + error);
+                        }
+                    });
+                    */
+                }
+            });
+
+        });
+        function createCORSRequest(method, url, data) {
+            var xhr = new  XMLHttpRequest();
+            if ("withCredentials" in xhr) {
+                // Check if the XMLHttpRequest object has a "withCredentials" property.
+                // "withCredentials" only exists on XMLHTTPRequest2 objects.
+
+                xhr.open(method, url, true);
+                xhr.setRequestHeader("Synx-Cat","1");
+                xhr.send(data)
+            } else if (typeof XDomainRequest != "undefined") {
+                // Otherwise, check if XDomainRequest.
+                // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+                xhr = new XDomainRequest();
+                xhr.open(method, url);
+            } else {
+                // Otherwise, CORS is not supported by the browser.
+                xhr = null;
+            }
+            return xhr;
+        }
+
+
+    </script>
+</head>
+<body>
+
+<button>Send an HTTP POST request to a page and get the result back</button>
+
+</body>
+</html>
